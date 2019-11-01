@@ -27,6 +27,7 @@ function carouselCreator() {
 
   const leftButton = document.createElement('div');
   leftButton.classList.add('left-button');
+  leftButton.textContent = ' < ';
   newCarousel.appendChild(leftButton);
 
   const imgMountain = document.createElement('img');
@@ -47,6 +48,7 @@ function carouselCreator() {
 
   const rightButton = document.createElement('div');
   rightButton.classList.add('right-button');
+  rightButton.textContent = ' > ';
   newCarousel.appendChild(rightButton);
 
   return newCarousel;

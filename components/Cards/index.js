@@ -18,20 +18,20 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
-// axios.get('https://lambda-times-backend.herokuapp.com/articles')
-//     .then(response => {
-//         // console.log(response.data.articles);
-//         for(let key in response.data.articles) {
-//             // console.log(id);
-//             for(let i = 0; i < response.data.articles[key].length; i++) {
-//                 console.log(response.data.articles[key]);
-//                 const entryPoint = document.querySelector('.cards-container');
-//                 const articleCard = cardCreator(response.data.articles[key][i]);
-//                 // console.log(response.data.articles[key][i]);
-//                 entryPoint.appendChild(articleCard);
-//             }
-//         }
-//     })
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+    .then(response => {
+        // console.log(response.data.articles);
+        for(let key in response.data.articles) {
+            // console.log(id);
+            for(let i = 0; i < response.data.articles[key].length; i++) {
+                console.log(response.data.articles[key]);
+                const entryPoint = document.querySelector('.cards-container');
+                const articleCard = cardCreator(response.data.articles[key][i]);
+                // console.log(response.data.articles[key][i]);
+                entryPoint.appendChild(articleCard);
+            }
+        }
+    })
 
 // axios.get('https://lambda-times-backend.herokuapp.com/articles')
 //     .then(response => {
